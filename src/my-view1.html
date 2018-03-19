@@ -1,0 +1,59 @@
+<link rel="import" href="../bower_components/polymer/polymer-element.html">
+<link rel="import" href="shared-styles.html">
+<link rel="import" href="../bower_components/iron-list/iron-list.html">
+<link rel="import" href="../bower_components/iron-ajax/iron-ajax.html">
+<link rel="import" href="../bower_components/paper-tooltip/paper-tooltip.html">
+
+<dom-module id="my-view1">
+  <template>
+    <style include="shared-styles">
+      :host {
+        display: block;
+        padding: 10px;
+      }
+
+      .listContent {
+          @apply --layout;
+          background-color: rgb(255, 255, 255);
+          position: relative;
+          width: 80px;
+          height: 80px;
+          padding: 10px;
+        }
+
+        .listContent > div {
+          @apply --layout-flex;
+        }
+
+        .listContent > img {
+          height: 100%;
+        }
+
+        iron-list {
+          margin-bottom: 20px;
+        }
+
+    </style>
+
+    <div class="card">
+      <h1>Technologies</h1>
+      <iron-ajax url="../data/data.json" last-response="{{data}}" auto></iron-ajax>
+        <iron-list items="[[data]]" as="item" scroll-target="document" grid>
+            <template>
+                <div class="flex-container">
+                 <div class="listContent"><img  id$="index" src$="[[item.icon]]" alt$=[[item.technology]]/></div>
+                 <paper-tooltip for$="index">[[item.technology]]</paper-tooltip>
+                </div>
+              </template>
+        </iron-list>
+    </div>
+  </template>
+
+  <script>
+    class MyView1 extends Polymer.Element {
+      static get is() { return 'my-view1'; }
+    }
+
+    window.customElements.define(MyView1.is, MyView1);
+  </script>
+</dom-module>

@@ -1,0 +1,30 @@
+[
+    {
+        "technology":"JAVA",
+        "icon":"../images/java.png"
+    },
+    {
+        "technology":"JEE",
+        "icon":"../images/jee.png"
+    },
+    {
+        "technology":"Spring Boot",
+        "icon":"../images/sboot.png"
+    },
+    {
+        "technology":"HTML5",
+        "icon":"../images/html.png"
+    },
+    {
+        "technology":"CSS3",
+        "icon":"../images/css.png"
+    },
+    {
+        "technology":"Javascript",
+        "icon":"../images/js.png"
+    },
+    {
+        "technology":"PolymerJS",
+        "icon":"../images/polymer.png"
+    }
+]

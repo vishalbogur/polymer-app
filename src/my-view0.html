@@ -1,0 +1,116 @@
+<!--
+@license
+Copyright (c) 2016 The Polymer Project Authors. All rights reserved.
+This code may only be used under the BSD style license found at http://polymer.github.io/LICENSE.txt
+The complete set of authors may be found at http://polymer.github.io/AUTHORS.txt
+The complete set of contributors may be found at http://polymer.github.io/CONTRIBUTORS.txt
+Code distributed by Google as part of the polymer project is also
+subject to an additional IP rights grant found at http://polymer.github.io/PATENTS.txt
+-->
+
+<link rel="import" href="../bower_components/polymer/polymer-element.html">
+<link rel="import" href="shared-styles.html">
+<link rel="import" href="../bower_components/paper-card/paper-card.html">
+<link rel="import" href="../bower_components/app-localize-behavior/app-localize-behavior.html">
+
+<dom-module id="my-view0">
+  <template>
+    <style include="shared-styles">
+      :host {
+        display: block;
+        padding: 10px;
+      }
+
+      .cafe-header {
+        margin-left: 100px;
+        margin-top: 20px;
+      }
+
+      .cafe-header>p {
+        font-size: 12px;
+        margin: 0;
+      }
+
+      paper-card img {
+        height: 50px;
+      }
+
+      .rate-image {
+        position: absolute;
+        top: 0;
+        left: 0;
+        bottom: 0;
+        margin-left: 5px;
+        margin-top: 5px;
+        margin-bottom: 5px;
+        width: 100px;
+        height: 100px;
+        background: url('../images/vishal.png');
+        background-size: cover;
+        border-radius: 80px;
+      }
+
+
+      @media (min-width: 360px) {
+        .cafe-light {
+          margin-top: 12%;
+        }
+      }
+
+      @media (min-width: 412px) {
+        .cafe-light {
+          margin-top: 15%;
+        }
+      }
+
+      @media (min-width: 768px) {
+        .cafe-light {
+          margin-top: 55px;
+        }
+      }
+
+      ul {
+        padding: 0;
+      }
+    </style>
+
+    <div class="card">
+      <h1>Personal Information</h1>
+      <paper-card>
+        <div class="card-content">
+          <div class="rate-image"></div>
+          <div class="cafe-header">Vishal Bogur
+            <p>Development Engineer, CGI Netherlands</p>
+          </div>
+          <p class="cafe-light">
+            <ul>Lead Java developer having an overall experience of 5+ years. I have worked on multiple projects across several
+              of domains in the bank and also worked as a backend Java developer of mobile banking app for ABN AMRO bank.
+            </ul>
+            <ul>I was part of an AGILE - Scrum team involving multiple vendors of the bank with front end and back end resources
+              working in close collaboration to implement new services for features like iDEAL, TouchID, Loyalty App. </p>
+          </ul>
+        </div>
+      </paper-card>
+
+    </div>
+  </template>
+
+  <script>
+    class MyView0 extends Polymer.mixinBehaviors([Polymer.AppLocalizeBehavior], Polymer.Element) {
+      static get is() { return 'my-view0'; }
+      static get properties() {
+                return {
+                    language: {
+                        value: 'EN'
+                    }
+                };
+            }
+
+      attached() {
+        this.loadResources(this.resolveUrl("../data/locales.json"));
+      }
+    }
+
+    window.customElements.define(MyView0.is, MyView0);
+  </script>
+</dom-module>

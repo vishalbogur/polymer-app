@@ -1,0 +1,73 @@
+<link rel="import" href="../bower_components/polymer/polymer-element.html">
+<link rel="import" href="shared-styles.html">
+<link rel="import" href="../bower_components/iron-list/iron-list.html">
+<link rel="import" href="../bower_components/iron-ajax/iron-ajax.html">
+
+<dom-module id="my-view2">
+  <template>
+    <style include="shared-styles">
+      :host {
+        display: block;
+        padding: 10px;
+      }
+      iron-list {
+        --iron-list-items-container: {
+          margin: auto;
+        };
+      }
+      .item {
+        @apply --layout-horizontal;
+        padding: 20px;
+        background-color: #e8eef8;
+        border: 1px solid #97bcf8;
+        cursor: pointer;
+        margin-bottom: 10px;
+      }
+     .pad {
+        @apply --layout-flex;
+        @apply --layout-vertical;
+      }
+      .primary {
+        font-size: 16px;
+        font-weight: bold;
+      }
+      .shortText {
+        font-size: 14px;
+      }
+      .item:hover .shortText::after {
+        color: gray;
+      }
+      .item.expanded:hover .shortText::after {
+        content: '';
+      }
+    </style>
+<iron-ajax url="data/attributes.json" last-response="{{attributes}}" auto></iron-ajax>
+<div class="card">
+<h1>Personal Attributes</h1>
+<iron-list id="list" items="[[attributes]]" as="item" selection-enabled multi-selection>
+    <template>
+      <div>
+        <div class$="[[getClassForItem(item, selected)]]" tabindex$="[[tabIndex]]">
+          <div class="pad">
+            <div class="primary">[[item.name]]</div>
+            <div class="shortText">[[item.sDescription]]</div>
+          </div>
+        </div>
+      </div>
+    </template>
+  </iron-list>
+</div>
+  </template>
+
+  <script>
+    class MyView2 extends Polymer.Element {
+      static get is() { return 'my-view2'; }
+
+      getClassForItem(item, selected){
+        return selected ? 'item expanded' : 'item';
+      }
+    }
+
+    window.customElements.define(MyView2.is, MyView2);
+  </script>
+</dom-module>

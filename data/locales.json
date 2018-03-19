@@ -1,8 +1,22 @@
 {
     "EN":{
-        "language":"Language"
+        "language":"Language",
+        "personalInfo":"Personal Information",
+        "experience":"Experience",
+        "technologies":"Technologies",
+        "attributes":"Attributes",
+        "otherInterests":"Other Interests",
+        "descriptionOne": "Lead Java developer having an overall experience of 5+ years. I have worked on multiple projects across several of domains in the bank and also worked as a backend Java developer of mobile banking app for ABN AMRO bank.",
+        "descriptionTwo":"I was part of an AGILE - Scrum team involving multiple vendors of the bank with front end and back end resources working in close collaboration to implement new services for features like iDEAL, TouchID, Loyalty App."
     },
     "NL": {
-        "language":"Taal"
+        "language":"Taal",
+        "personalInfo":"Persoonlijke informatie",
+        "experience":"Experience",
+        "technologies":"Technologies",
+        "attributes":"Attributen",
+        "otherInterests":"Andere Interesses",
+        "descriptionOne": "Senior Java-ontwikkelaar met een algemene ervaring van meer dan vijf jaar. Ik heb aan meerdere projecten in verschillende domeinen van de bank gewerkt en werkte ook als een back-end Java-ontwikkelaar van app voor mobiel bankieren voor ABN AMRO.",
+        "descriptionTwo":"Ik maakte deel uit van een AGILE - Scrum-team met meerdere leveranciers van de bank, met front-end en back-end middelen die nauw samenwerken om nieuwe services te implementeren voor functies zoals iDEAL, TouchID, Loyalty App."
     }
 }

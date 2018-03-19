@@ -1,16 +1,8 @@
-<!--
-@license
-Copyright (c) 2016 The Polymer Project Authors. All rights reserved.
-This code may only be used under the BSD style license found at http://polymer.github.io/LICENSE.txt
-The complete set of authors may be found at http://polymer.github.io/AUTHORS.txt
-The complete set of contributors may be found at http://polymer.github.io/CONTRIBUTORS.txt
-Code distributed by Google as part of the polymer project is also
-subject to an additional IP rights grant found at http://polymer.github.io/PATENTS.txt
--->
-
 <link rel="import" href="../bower_components/polymer/polymer-element.html">
 <link rel="import" href="shared-styles.html">
 <link rel="import" href="../bower_components/paper-card/paper-card.html">
+<link rel="import" href="../bower_components/paper-dialog/paper-dialog.html">
+<link rel="import" href="../bower_components/paper-button/paper-button.html">
 <link rel="import" href="../bower_components/app-localize-behavior/app-localize-behavior.html">
 
 <dom-module id="my-view0">
@@ -31,8 +23,8 @@ subject to an additional IP rights grant found at http://polymer.github.io/PATEN
         margin: 0;
       }
 
-      paper-card img {
-        height: 50px;
+      paper-dialog > img {
+        height: 250px;
       }
 
       .rate-image {
@@ -75,23 +67,26 @@ subject to an additional IP rights grant found at http://polymer.github.io/PATEN
     </style>
 
     <div class="card">
-      <h1>Personal Information</h1>
+      <h1>[[localize('personalInfo')]]</h1>
       <paper-card>
         <div class="card-content">
-          <div class="rate-image"></div>
+          <div class="rate-image" on-tap="_openImage"></div>
           <div class="cafe-header">Vishal Bogur
             <p>Development Engineer, CGI Netherlands</p>
           </div>
           <p class="cafe-light">
-            <ul>Lead Java developer having an overall experience of 5+ years. I have worked on multiple projects across several
-              of domains in the bank and also worked as a backend Java developer of mobile banking app for ABN AMRO bank.
+            <ul>[[localize('descriptionOne')]]
             </ul>
-            <ul>I was part of an AGILE - Scrum team involving multiple vendors of the bank with front end and back end resources
-              working in close collaboration to implement new services for features like iDEAL, TouchID, Loyalty App. </p>
+            <ul><ul>[[localize('descriptionTwo')]]</p>
           </ul>
         </div>
       </paper-card>
-
+      <paper-dialog id="imageDialog" entry-animation="scale-up-animation">
+        <img src="../images/vishal.png" alt="Vishal Bogur"/>
+        <div class="buttons">
+          <paper-button dialog-dismiss>Close</paper-button>
+        </div>
+      </paper-dialog>
     </div>
   </template>
 
@@ -108,6 +103,10 @@ subject to an additional IP rights grant found at http://polymer.github.io/PATEN
 
       attached() {
         this.loadResources(this.resolveUrl("../data/locales.json"));
+      }
+
+      _openImage(){
+        this.$.imageDialog.open();
       }
     }
 

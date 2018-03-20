@@ -1,0 +1,35 @@
+<link rel="import" href="../bower_components/polymer/polymer-element.html">
+<link rel="import" href="shared-styles.html">
+<link rel="import" href="../bower_components/paper-contact/paper-contact-list.html">
+
+<dom-module id="my-view5">
+  <template>
+    <style include="shared-styles">
+      :host {
+        display: block;
+
+        padding: 10px;
+      }
+    </style>
+
+    <div class="card">
+      <h1>Contact</h1>
+      <paper-contact-list style="width: 100%; max-width: 300px;">
+            <paper-contact-email>vishalbogur@gmail.com</paper-contact-email>
+            <paper-contact-mobile>+31644793554</paper-contact-mobile>
+            <paper-contact-linkedin>https://www.linkedin.com/in/vishal-bogur-02474049/</paper-contact-linkedin>
+            <paper-contact-twitter>@vishalbogur</paper-contact-twitter>
+            <paper-contact-skype>vishal.bogur</paper-contact-skype>
+            <paper-contact-address latitude="51.5287718" longitude="-0.2416798">Kostverlorenhof 131&#10;1183HJ&#10;Amstelveen, Netherlands</paper-contact-address>
+        </paper-contact-list>
+    </div>
+  </template>
+
+  <script>
+    class MyView5 extends Polymer.Element {
+      static get is() { return 'my-view5'; }
+    }
+
+    window.customElements.define(MyView5.is, MyView5);
+  </script>
+</dom-module>

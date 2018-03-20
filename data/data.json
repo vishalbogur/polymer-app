@@ -26,5 +26,21 @@
     {
         "technology":"PolymerJS",
         "icon":"../images/polymer.png"
+    },
+    {
+        "technology":"REST Api",
+        "icon":"../images/rest.webp"
+    },
+    {
+        "technology":"My SQL",
+        "icon":"../images/mysql.png"
+    },
+    {
+        "technology":"Git",
+        "icon":"../images/git.png"
+    },
+    {
+        "technology":"Jenkins",
+        "icon":"../images/jenkins.svg"
     }
 ]

@@ -1,6 +1,7 @@
 {
     "EN":{
         "language":"Language",
+        "appVersion":"App Version",
         "personalInfo":"Personal Information",
         "experience":"Experience",
         "technologies":"Technologies",
@@ -11,6 +12,7 @@
     },
     "NL": {
         "language":"Taal",
+        "appVersion":"App Versie",
         "personalInfo":"Persoonlijke informatie",
         "experience":"Experience",
         "technologies":"Technologies",

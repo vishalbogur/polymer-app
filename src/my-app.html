@@ -82,6 +82,16 @@
         }
       }
 
+      .appVersion {
+        font-size: 12px;
+        color: var(--app-primary-color);
+        margin-left: 5%;
+      }
+
+      .copyright {
+        float: right;
+        margin-right: 5%;
+      }
     </style>
 
     <app-location
@@ -107,6 +117,10 @@
           <a name="view2" href="[[rootPath]]view2">[[localize('attributes')]]</a>
           <a name="view3" href="[[rootPath]]view3">[[localize('otherInterests')]]</a>
         </iron-selector>
+        <div class="appVersion">
+          <span>[[localize('appVersion')]]: 1.0.0</span>
+          <span class="copyright">©vishalbogur</span>
+        </div>
       </app-drawer>
 
       <!-- Main content -->

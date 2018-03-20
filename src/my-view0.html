@@ -18,6 +18,10 @@
         margin-top: 20px;
       }
 
+      .cafe-header > span {
+        font-weight: bold;
+      }
+
       .cafe-header>p {
         font-size: 12px;
         margin: 0;
@@ -40,6 +44,7 @@
         background: url('../images/vishal.png');
         background-size: cover;
         border-radius: 80px;
+        box-shadow: var(--paper-material-elevation-2_-_box-shadow);
       }
 
 
@@ -71,7 +76,7 @@
       <paper-card>
         <div class="card-content">
           <div class="rate-image" on-tap="_openImage"></div>
-          <div class="cafe-header">Vishal Bogur
+          <div class="cafe-header"><span>Vishal Bogur</span>
             <p>Development Engineer, CGI Netherlands</p>
           </div>
           <p class="cafe-light">

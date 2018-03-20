@@ -1,0 +1,91 @@
+<link rel="import" href="../bower_components/polymer/polymer-element.html">
+<link rel="import" href="shared-styles.html">
+<link rel="import" href="../bower_components/iron-list/iron-list.html">
+<link rel="import" href="../bower_components/iron-ajax/iron-ajax.html">
+
+<dom-module id="my-view4">
+  <template>
+    <style include="shared-styles">
+      :host {
+        display: block;
+        padding: 10px;
+      }
+
+      iron-list {
+        --iron-list-items-container: {
+          margin: auto;
+        };
+        padding: inherit;
+        height: -webkit-fill-available;
+      }
+
+      .item {
+        @apply --layout-horizontal;
+        padding: 20px;
+        background-color: #e8eef8;
+        border: 1px solid #97bcf8;
+        cursor: pointer;
+        margin-bottom: 10px;
+      }
+
+      .card {
+        height: 100%;
+      }
+
+      .primary {
+        font-size: 16px;
+        font-weight: bold;
+      }
+      .shortText, .longText {
+        font-size: 14px;
+      }
+      .longText {
+        color: gray;
+        display: none;
+      }
+      .item:hover .shortText::after {
+        content: ' [+]';
+        color: gray;
+      }
+      .item.expanded:hover .shortText::after {
+        content: '';
+      }
+      .item.expanded .longText {
+        display: block;
+      }
+      .item.expanded:hover .longText::after {
+        content: ' [–]';
+      }
+    </style>
+
+    <div class="card">
+      <h1>Experience</h1>
+      <iron-ajax url="data/experience.json" last-response="{{items}}" auto></iron-ajax>
+      <iron-list id="list" items="[[items]]" as="item" selection-enabled multi-selection>
+        <template>
+          <div>
+            <div class$="[[getClassForItem(item, selected)]]" tabindex$="[[tabIndex]]">
+              <div class="pad">
+                <div class="primary">[[item.role]]</div>
+                <div class="shortText">[[item.client]] [[item.period]]</div>
+                <div class="longText">[[item.description]]</div>
+              </div>
+            </div>
+          </div>
+        </template>
+      </iron-list>
+    </div>
+  </template>
+
+  <script>
+    class MyView4 extends Polymer.Element {
+      static get is() { return 'my-view4'; }
+
+      getClassForItem(item, selected) {
+          return selected ? 'item expanded' : 'item';
+        }
+    }
+
+    window.customElements.define(MyView4.is, MyView4);
+  </script>
+</dom-module>

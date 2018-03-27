@@ -1,0 +1,83 @@
+{
+    "programming" : [{
+        "skill":"Java",
+        "noOFYears":"5",
+        "level":"3"
+    },
+    {
+        "skill":"JEE",
+        "noOFYears":"5",
+        "level":"3"
+    },
+    {
+        "skill":"JUnit",
+        "noOFYears":"1",
+        "level":"2"
+    },
+    {
+        "skill":"HTML",
+        "noOFYears":"1",
+        "level":"2"
+    },
+    {
+        "skill":"CSS",
+        "noOFYears":"1",
+        "level":"2"
+    },
+    {
+        "skill":"Javascript",
+        "noOFYears":"1",
+        "level":"2"
+    }],
+    "frameworks" : [{
+        "skill":"Spring Boot",
+        "noOFYears":"1",
+        "level":"2"
+    },
+    {
+        "skill":"Spring MVC",
+        "noOFYears":"2",
+        "level":"2"
+    },
+    {
+        "skill":"Hibernate",
+        "noOFYears":"1",
+        "level":"2"
+    },
+    {
+        "skill":"RESTful APIs",
+        "noOFYears":"2",
+        "level":"3"
+    }],
+    "tools" : [
+    {
+        "skill":"Jenkins",
+        "noOFYears":"2",
+        "level":"2"
+    },
+    {
+        "skill":"Jira",
+        "noOFYears":"1",
+        "level":"2"
+    },
+    {
+        "skill":"Eclipse",
+        "noOFYears":"4",
+        "level":"3"
+    },
+    {
+        "skill":"Git",
+        "noOFYears":"2",
+        "level":"3"
+    },
+    {
+        "skill":"VS Code",
+        "noOFYears":"1",
+        "level":"2"
+    },
+    {
+        "skill":"SOAP UI",
+        "noOFYears":"2",
+        "level":"2"
+    }]
+}

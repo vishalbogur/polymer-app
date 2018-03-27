@@ -27,11 +27,15 @@
             }
 
             h3{
-                background-color: #84aef1;
+                background-color: #699def;
                 color: white;
-                padding: 10px;
+                padding: 20px;
                 margin-bottom: unset;
             }
+            p {
+                font-size: 12px;
+            }
+
         </style>
 
         <div class="card">
@@ -100,6 +104,7 @@
                     </vaadin-grid-column>
                 </vaadin-grid>
             </div>
+            <p>*0 = none, 1 = little, 2 = good, 3 = very good, 4 = expert</p>
         </div>
     </template>
 
@@ -118,7 +123,7 @@
             }
 
             toggleDiv(div) {
-                if (div.style.display == "none") {
+                if (div.style.display == "none" || div.style.display == "") {
                     div.style.display = "block";
                 } else {
                     div.style.display = "none";

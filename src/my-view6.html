@@ -42,7 +42,7 @@
             <h1>Skill Matrix</h1>
             <iron-ajax url="data/skills.json" last-response="{{skills}}" auto></iron-ajax>
             <div on-tap="toggleProgrammingDiv">
-                <h3>Programming Skills</h3>
+                <h3>Programming Skills <span id="pSpan">+</span></h3>
             </div>
             <div id="programmingDiv">
                 <vaadin-grid aria-label="Skill Matrix" items="[[skills.programming]]">
@@ -63,7 +63,7 @@
                 </vaadin-grid>
             </div>
             <div on-tap="toggleFWDiv">
-                <h3>Frameworks</h3>
+                <h3>Frameworks <span id="fSpan">+</span></h3>
             </div>
             <div id="frameworksDiv">
                 <vaadin-grid aria-label="Skill Matrix" items="[[skills.frameworks]]">
@@ -84,7 +84,7 @@
                 </vaadin-grid>
             </div>
             <div on-tap="toggleToolsDiv">
-                <h3>Tools</h3>
+                <h3>Tools <span id="tSpan">+</span></h3>
             </div>
             <div id="toolsDiv">
                 <vaadin-grid aria-label="Skill Matrix" items="[[skills.tools]]">
@@ -113,20 +113,22 @@
             static get is() { return 'my-view6'; }
 
             toggleProgrammingDiv() {
-                this.toggleDiv(this.$.programmingDiv);
+                this.toggleDiv(this.$.programmingDiv, this.$.pSpan);
             }
             toggleFWDiv() {
-                this.toggleDiv(this.$.frameworksDiv);
+                this.toggleDiv(this.$.frameworksDiv, this.$.fSpan);
             }
             toggleToolsDiv() {
-                this.toggleDiv(this.$.toolsDiv);
+                this.toggleDiv(this.$.toolsDiv, this.$.tSpan);
             }
 
-            toggleDiv(div) {
+            toggleDiv(div,divSpan) {
                 if (div.style.display == "none" || div.style.display == "") {
                     div.style.display = "block";
+                    divSpan.innerText = '-';
                 } else {
                     div.style.display = "none";
+                    divSpan.innerText = '+';
                 }
             }
         }

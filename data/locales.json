@@ -9,8 +9,11 @@
         "otherInterests":"Other Interests",
         "skillMatrix":"Skill Matrix",
         "contactMe":"Contact",
-        "descriptionOne": "Lead Java developer having an overall experience of 5+ years. I have worked on multiple projects across several of domains in the bank and also worked as a backend Java developer of mobile banking app for ABN AMRO bank.",
-        "descriptionTwo":"I was part of an AGILE - Scrum team involving multiple vendors of the bank with front end and back end resources working in close collaboration to implement new services for features like iDEAL, TouchID, Loyalty App."
+        "resumeDoc":"Resume Doc",
+        "descriptionOne": "Lead full stack developer having an overall experience of almost 6 years(Nov-2012 to present). I have worked on multiple projects for various clients in the Netherlands like ABN AMRO, Bank Mendes Gans(ING group).",
+        "descriptionTwo":"I have a working experience in Agile - Scrum(also as scrum master) and worked as a developer on implementing various features like TouchId, iDeal, Loyalty App, Polymer web component library etc. I have been part of scrum teams with international culture where collaboration is key to success.",
+        "descriptionThree":"I am self-driven and highly motivated person. I also like learning new technologies and frameworks and adopting them into day to day work. Also result oriented and focused on delivering results as per the industry standards.",
+        "descriptionFour":"En ja, ik spreek klein beetje  Nedelands :)"
     },
     "NL": {
         "language":"Taal",
@@ -22,7 +25,10 @@
         "otherInterests":"Andere Interesses",
         "skillMatrix":"Skill Matrix",
         "contactMe":"Contact",
+        "resumeDoc":"Resume Doc",
         "descriptionOne": "Senior Java-ontwikkelaar met een algemene ervaring van meer dan vijf jaar. Ik heb aan meerdere projecten in verschillende domeinen van de bank gewerkt en werkte ook als een back-end Java-ontwikkelaar van app voor mobiel bankieren voor ABN AMRO.",
-        "descriptionTwo":"Ik maakte deel uit van een AGILE - Scrum-team met meerdere leveranciers van de bank, met front-end en back-end middelen die nauw samenwerken om nieuwe services te implementeren voor functies zoals iDEAL, TouchID, Loyalty App."
+        "descriptionTwo":"Ik maakte deel uit van een AGILE - Scrum-team met meerdere leveranciers van de bank, met front-end en back-end middelen die nauw samenwerken om nieuwe services te implementeren voor functies zoals iDEAL, TouchID, Loyalty App.",
+        "descriptionThree": "I am self-driven and highly motivated person. I also like learning new technologies and frameworks and adopting them into day to day work. Also result oriented and focused on delivering results as per the industry standards.",
+        "descriptionFour":"En ja, ik spreek klein beetje  Nedelands :)"
     }
 }

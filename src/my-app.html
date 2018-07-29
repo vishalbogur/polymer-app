@@ -28,7 +28,7 @@
   <template>
     <style>
       :host {
-        --app-primary-color: #4285f4;
+        --app-primary-color: #fff;
         --app-secondary-color: black;
 
         display: block;
@@ -40,11 +40,16 @@
 
       app-header {
         color: #fff;
-        background-color: var(--app-primary-color);
+        background: linear-gradient(to right, #38b378, #18a2ae);
       }
 
       app-header paper-icon-button {
         --paper-icon-button-ink-color: white;
+      }
+
+      app-toolbar {
+        background: linear-gradient(to right, #38b378, #18a2ae);
+        color: white;
       }
 
       .drawer-list {
@@ -55,7 +60,7 @@
         display: block;
         padding: 0 16px;
         text-decoration: none;
-        color: var(--app-secondary-color);
+        color: #1da5a5;
         line-height: 40px;
       }
 
@@ -77,12 +82,21 @@
       paper-dropdown-menu.custom {
         --paper-input-container-label: {
           color: #fff;
-        }
+        };
 
         --paper-input-container-input: {
           color: #fff;
-        }
-      }
+        };
+
+        --paper-dropdown-menu-icon: {
+          color: #fff;
+        };
+
+        --paper-input-container-focus:{
+          color: #fff;
+        };
+
+     }
 
       .appVersion {
         font-size: 12px;

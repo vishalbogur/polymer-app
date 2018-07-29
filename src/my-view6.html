@@ -8,11 +8,6 @@
         <style include="shared-styles">
             :host {
                 display: block;
-                padding: 10px;
-            }
-
-            .card {
-                height: 100%;
             }
 
             vaadin-grid {
@@ -22,12 +17,13 @@
 
             #programmingDiv,
             #toolsDiv,
-            #frameworksDiv {
+            #frameworksDiv,
+            #certsDiv {
                 display: none;
             }
 
             h3{
-                background-color: #699def;
+                background: linear-gradient(to right, #38b378, #18a2ae);
                 color: white;
                 padding: 20px;
                 margin-bottom: unset;
@@ -104,6 +100,16 @@
                     </vaadin-grid-column>
                 </vaadin-grid>
             </div>
+            <div on-tap="toggleCertsDiv">
+                <h3>Certifications <span id="cSpan">+</span></h3>
+            </div>
+            <div id="certsDiv">
+                <vaadin-grid aria-label="Certifications" items="[[skills.certifications]]">
+                    <vaadin-grid-column>
+                        <template>[[item.name]]</template>
+                    </vaadin-grid-column>
+                </vaadin-grid>
+            </div>
             <p>*0 = none, 1 = little, 2 = good, 3 = very good, 4 = expert</p>
         </div>
     </template>
@@ -120,6 +126,10 @@
             }
             toggleToolsDiv() {
                 this.toggleDiv(this.$.toolsDiv, this.$.tSpan);
+            }
+
+            toggleCertsDiv() {
+                this.toggleDiv(this.$.certsDiv, this.$.cSpan);
             }
 
             toggleDiv(div,divSpan) {

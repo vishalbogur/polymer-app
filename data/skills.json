@@ -10,11 +10,6 @@
         "level":"3"
     },
     {
-        "skill":"JUnit",
-        "noOFYears":"1",
-        "level":"2"
-    },
-    {
         "skill":"HTML",
         "noOFYears":"1",
         "level":"2"
@@ -26,6 +21,11 @@
     },
     {
         "skill":"Javascript",
+        "noOFYears":"1",
+        "level":"2"
+    },
+    {
+        "skill":"Google Polymer",
         "noOFYears":"1",
         "level":"2"
     }],
@@ -79,5 +79,10 @@
         "skill":"SOAP UI",
         "noOFYears":"2",
         "level":"2"
-    }]
+    }],
+    "certifications":[
+        {
+            "name": "Professional Scrum Master I"
+        }
+    ]
 }

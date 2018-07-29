@@ -10,7 +10,6 @@
     <style include="shared-styles">
       :host {
         display: block;
-        padding: 10px;
       }
 
       .cafe-header {
@@ -18,7 +17,7 @@
         margin-top: 20px;
       }
 
-      .cafe-header > span {
+      .cafe-header>span {
         font-weight: bold;
       }
 
@@ -27,7 +26,7 @@
         margin: 0;
       }
 
-      paper-dialog > img {
+      paper-dialog>img {
         height: 250px;
       }
 
@@ -41,12 +40,11 @@
         margin-bottom: 5px;
         width: 100px;
         height: 100px;
-        background: url('../images/vishal.png');
+        background: url('../images/vishal.jpg');
         background-size: cover;
         border-radius: 80px;
         box-shadow: var(--paper-material-elevation-2_-_box-shadow);
       }
-
 
       @media (min-width: 360px) {
         .cafe-light {
@@ -76,18 +74,23 @@
       <paper-card>
         <div class="card-content">
           <div class="rate-image" on-tap="_openImage"></div>
-          <div class="cafe-header"><span>Vishal Bogur</span>
+          <div class="cafe-header">
+            <span>Vishal Bogur</span>
             <p>Development Engineer, CGI Netherlands</p>
           </div>
           <p class="cafe-light">
             <ul>[[localize('descriptionOne')]]
             </ul>
-            <ul><ul>[[localize('descriptionTwo')]]</p>
+            <ul>[[localize('descriptionTwo')]]</p>
+          </ul>
+          <ul>[[localize('descriptionThree')]]</p>
+          </ul>
+          <ul>[[localize('descriptionFour')]]</p>
           </ul>
         </div>
       </paper-card>
       <paper-dialog id="imageDialog" entry-animation="scale-up-animation">
-        <img src="../images/vishal.png" alt="Vishal Bogur"/>
+        <img src="../images/vishal.jpg" alt="Vishal Bogur" />
         <div class="buttons">
           <paper-button dialog-dismiss>Close</paper-button>
         </div>
@@ -99,18 +102,18 @@
     class MyView0 extends Polymer.mixinBehaviors([Polymer.AppLocalizeBehavior], Polymer.Element) {
       static get is() { return 'my-view0'; }
       static get properties() {
-                return {
-                    language: {
-                        value: 'EN'
-                    }
-                };
-            }
+        return {
+          language: {
+            value: 'EN'
+          }
+        };
+      }
 
       attached() {
         this.loadResources(this.resolveUrl("../data/locales.json"));
       }
 
-      _openImage(){
+      _openImage() {
         this.$.imageDialog.open();
       }
     }

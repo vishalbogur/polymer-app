@@ -16,6 +16,12 @@
         "client":"CGI",
         "period":"[Sep 2017 - Mar 2018]",
         "description": "Joining CGI as an Experienced Software Engineer in the Banking & Insurance sector of CGI Nederland. Pursuing a technical career in The Netherlands as an End-to-End Java Developer for the Dutch clients of CGI and helping them in their Digital Transformation."
+    },
+    {
+        "role": "Senior developer",
+        "client":"Bank Mendes Gans(ING group)",
+        "period":"[Mar 2018 - Present]",
+        "description": "Working as a senior developer in BMG, I am involved in building web components(using Google Polymer) for the developers of BMG. I build small web components which can be used by other developers to build/assemble applications"
     }
 ]
 

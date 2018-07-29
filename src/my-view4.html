@@ -8,7 +8,6 @@
     <style include="shared-styles">
       :host {
         display: block;
-        padding: 10px;
       }
 
       iron-list {
@@ -22,14 +21,10 @@
       .item {
         @apply --layout-horizontal;
         padding: 20px;
-        background-color: #e8eef8;
-        border: 1px solid #97bcf8;
+        background: linear-gradient(to right, #38b378, #18a2ae);
+        color: #fff;
         cursor: pointer;
         margin-bottom: 10px;
-      }
-
-      .card {
-        height: 100%;
       }
 
       .primary {
@@ -40,12 +35,12 @@
         font-size: 14px;
       }
       .longText {
-        color: gray;
+        color: #fff;
         display: none;
       }
       .item:hover .shortText::after {
         content: ' [+]';
-        color: gray;
+        color: #fff;
       }
       .item.expanded:hover .shortText::after {
         content: '';

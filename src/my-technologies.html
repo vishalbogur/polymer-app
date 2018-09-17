@@ -1,0 +1,114 @@
+<link rel="import" href="../bower_components/polymer/polymer-element.html">
+<link rel="import" href="shared-styles.html">
+<link rel="import" href="../bower_components/iron-list/iron-list.html">
+<link rel="import" href="../bower_components/iron-ajax/iron-ajax.html">
+<link rel="import" href="../bower_components/paper-tooltip/paper-tooltip.html">
+
+<dom-module id="my-technologies">
+  <template>
+    <style include="shared-styles">
+      :host {
+        display: block;
+      }
+
+      .listContent {
+        @apply --layout;
+        background-color: #ffffff;
+        position: relative;
+        width: 100px;
+        height: 100px;
+        padding: 16px;
+        border: 1px solid #c0dad0;
+      }
+
+      .listContent:hover>.techDesc {
+        display: block;
+      }
+
+      .listContent:hover>img {
+        height: 50%;
+        width: 50%;
+        position: absolute;
+        left: 25%;
+        animation: moveImage 0.5s ease-in;
+        -webkit-animation: moveImage 0.5s ease-in;
+      }
+
+      @keyframes moveImage {
+        from {
+          height: 70%;
+          width: 70%;
+          position: absolute;
+          left: 15%;
+        }
+        to {
+          height: 50%;
+          width: 50%;
+          position: absolute;
+          left: 25%;
+        }
+      }
+
+      .listContent:hover>.techDesc {
+        animation: showDesc 0.8s;
+        -webkit-animation: showDesc 0.8s;
+      }
+
+      @keyframes showDesc {
+        from {
+          height: 0;
+        }
+        to {
+          height: 40px;
+        }
+      }
+
+      .techDesc {
+        display: none;
+        color: #f5f5f5;
+        position: absolute;
+        bottom: 0;
+        right: 0;
+        background: #34b180;
+        width: 100%;
+        text-align: center;
+        height: 40px;
+        line-height: 40px;
+      }
+
+      .listContent>img {
+        height: 100%;
+        width: 100%;
+      }
+
+      iron-list {
+        margin-bottom: 20px;
+      }
+    </style>
+
+    <div class="card">
+      <h1>Tools & Technologies</h1>
+      <iron-ajax url="../data/data.json" last-response="{{data}}" auto></iron-ajax>
+      <iron-list items="[[data]]" as="item" scroll-target="document" grid>
+        <template>
+          <div class="flex-container">
+            <div class="listContent">
+              <img id$="index" src$="[[item.icon]]" alt$=[[item.technology]]/>
+              <div class="techDesc">
+                [[item.technology]]
+              </div>
+            </div>
+          </div>
+        </template>
+      </iron-list>
+    </div>
+  </template>
+
+  <script>
+    class MyTechnologies extends Polymer.Element {
+      static get is() { return 'my-technologies'; }
+    }
+
+    window.customElements.define(MyTechnologies.is, MyTechnologies);
+  </script>
+</dom-module>

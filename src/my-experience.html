@@ -3,7 +3,7 @@
 <link rel="import" href="../bower_components/iron-list/iron-list.html">
 <link rel="import" href="../bower_components/iron-ajax/iron-ajax.html">
 
-<dom-module id="my-view4">
+<dom-module id="my-experience">
   <template>
     <style include="shared-styles">
       :host {
@@ -73,14 +73,14 @@
   </template>
 
   <script>
-    class MyView4 extends Polymer.Element {
-      static get is() { return 'my-view4'; }
+    class MyExperience extends Polymer.Element {
+      static get is() { return 'my-experience'; }
 
       getClassForItem(item, selected) {
           return selected ? 'item expanded' : 'item';
         }
     }
 
-    window.customElements.define(MyView4.is, MyView4);
+    window.customElements.define(MyExperience.is, MyExperience);
   </script>
 </dom-module>

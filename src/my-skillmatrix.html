@@ -3,7 +3,7 @@
 <link rel="import" href="../bower_components/iron-ajax/iron-ajax.html">
 <link rel="import" href="../bower_components/vaadin-grid/vaadin-grid.html">
 
-<dom-module id="my-view6">
+<dom-module id="my-skillmatrix">
     <template>
         <style include="shared-styles">
             :host {
@@ -115,8 +115,8 @@
     </template>
 
     <script>
-        class MyView6 extends Polymer.Element {
-            static get is() { return 'my-view6'; }
+        class MySkillMatrix extends Polymer.Element {
+            static get is() { return 'my-skillmatrix'; }
 
             toggleProgrammingDiv() {
                 this.toggleDiv(this.$.programmingDiv, this.$.pSpan);
@@ -143,6 +143,6 @@
             }
         }
 
-        window.customElements.define(MyView6.is, MyView6);
+        window.customElements.define(MySkillMatrix.is, MySkillMatrix);
     </script>
 </dom-module>

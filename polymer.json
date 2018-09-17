@@ -2,13 +2,13 @@
   "entrypoint": "index.html",
   "shell": "src/my-app.html",
   "fragments": [
-    "src/my-view0.html",
-    "src/my-view1.html",
-    "src/my-view2.html",
-    "src/my-view3.html",
-    "src/my-view4.html",
-    "src/my-view5.html",
-    "src/my-view6.html",
+    "src/my-personalinfo.html",
+    "src/my-experience.html",
+    "src/my-technologies.html",
+    "src/my-attributes.html",
+    "src/my-interests.html",
+    "src/my-skillmatrix.html",
+    "src/my-contact.html",
     "src/my-view404.html"
   ],
   "sources": [

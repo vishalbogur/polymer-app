@@ -82,6 +82,9 @@
     }],
     "certifications":[
         {
+            "name": "AWS Certified Solution Architect - Associate"
+        },
+        {
             "name": "Professional Scrum Master I"
         }
     ]

@@ -26,6 +26,7 @@
         cursor: pointer;
         margin-bottom: 10px;
         box-shadow: 2px 2px 4px grey;
+        padding: 14px;
       }
 
       .primary {
@@ -39,9 +40,13 @@
         color: #fff;
         display: none;
       }
-      .item:hover .shortText::after {
+      .item .primary::after {
         content: ' [+]';
+        font-size: 16px;
+        font-weight: normal;
         color: #fff;
+        position: absolute;
+        right: 16px;
       }
       .item.expanded:hover .shortText::after {
         content: '';
@@ -49,8 +54,10 @@
       .item.expanded .longText {
         display: block;
       }
-      .item.expanded:hover .longText::after {
+      .item.expanded:hover .primary::after {
         content: ' [–]';
+        font-size: 16px;
+        font-weight: normal;
       }
 
       .item:focus {

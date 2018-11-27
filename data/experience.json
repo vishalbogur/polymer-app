@@ -1,15 +1,9 @@
 [
     {
-        "role": "Full stack developer - CISO ",
-        "client":"ABN AMRO Bank",
-        "period":"[Feb 2013 - Feb 2016]",
-        "description": "I worked on this assignment as an end-to-end developer for an intranet web application called as SIRIS (System for Integrated Risk and Information Security). My primary tasks were to work on development of new features for the application, fixing any bugs reported and work with onsite clients for more improvements in the application. I was also first point of contact for clients and offshore colleagues."
-    },
-    {
-        "role": "Senior developer - Mobile Banking",
-        "client":"ABN AMRO Bank",
-        "period":"[Mar 2016 – Jul 2017]",
-        "description": "I worked as a senior back end developer for ABN AMRO mobile apps (MOBILE BANKING and &Meer-loyalty app). My core responsibility in this role was to develop new RESTful web services for the new features of the mobile apps. I worked on various features of mobile banking app like iDEAL, TouchID and most of the feature services for ABN AMRO loyalty app(&Meer). In this assignment, I was part of an agile team and worked by continuously applying agile principles and guidelines."
+        "role": "Senior developer",
+        "client":"Bank Mendes Gans(ING group)",
+        "period":"[Mar 2018 - Present]",
+        "description": "Working as a senior developer in BMG, I am involved in building web components(using Google Polymer) for the developers of BMG. I build small web components which can be used by other developers to build/assemble applications"
     },
     {
         "role": "Full stack developer",
@@ -18,10 +12,16 @@
         "description": "Joining CGI as an Experienced Software Engineer in the Banking & Insurance sector of CGI Nederland. Pursuing a technical career in The Netherlands as an End-to-End Java Developer for the Dutch clients of CGI and helping them in their Digital Transformation."
     },
     {
-        "role": "Senior developer",
-        "client":"Bank Mendes Gans(ING group)",
-        "period":"[Mar 2018 - Present]",
-        "description": "Working as a senior developer in BMG, I am involved in building web components(using Google Polymer) for the developers of BMG. I build small web components which can be used by other developers to build/assemble applications"
+        "role": "Senior developer - Mobile Banking",
+        "client":"ABN AMRO Bank",
+        "period":"[Mar 2016 – Jul 2017]",
+        "description": "I worked as a senior back end developer for ABN AMRO mobile apps (MOBILE BANKING and &Meer-loyalty app). My core responsibility in this role was to develop new RESTful web services for the new features of the mobile apps. I worked on various features of mobile banking app like iDEAL, TouchID and most of the feature services for ABN AMRO loyalty app(&Meer). In this assignment, I was part of an agile team and worked by continuously applying agile principles and guidelines."
+    },
+    {
+        "role": "Full stack developer - CISO ",
+        "client":"ABN AMRO Bank",
+        "period":"[Feb 2013 - Feb 2016]",
+        "description": "I worked on this assignment as an end-to-end developer for an intranet web application called as SIRIS (System for Integrated Risk and Information Security). My primary tasks were to work on development of new features for the application, fixing any bugs reported and work with onsite clients for more improvements in the application. I was also first point of contact for clients and offshore colleagues."
     }
 ]
 

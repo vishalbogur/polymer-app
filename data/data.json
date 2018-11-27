@@ -12,6 +12,10 @@
         "icon":"../images/sboot.png"
     },
     {
+        "technology":"AWS",
+        "icon":"../images/aws.png"
+    },
+    {
         "technology":"HTML5",
         "icon":"../images/html.png"
     },
@@ -41,6 +45,6 @@
     },
     {
         "technology":"Jenkins",
-        "icon":"../images/jenkins.svg"
+        "icon":"../images/jenkins.png"
     }
 ]

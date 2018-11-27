@@ -32,6 +32,22 @@
                 font-size: 12px;
             }
 
+            vaadin-grid :nth-child(4){
+                font-weight: bold;
+            }
+
+            vaadin-grid :nth-child(5){
+                font-weight: bold;
+            }
+
+            vaadin-grid :nth-child(6){
+                font-weight: bold;
+            }
+
+            #certsDiv{
+                font-weight: bold;
+            }
+
         </style>
 
         <div class="card">
@@ -42,7 +58,7 @@
             </div>
             <div id="programmingDiv">
                 <vaadin-grid aria-label="Skill Matrix" items="[[skills.programming]]">
-                    <vaadin-grid-column>
+                    <vaadin-grid-column width="40%">
                         <template class="header">Skill</template>
                         <template>[[item.skill]]</template>
                     </vaadin-grid-column>
@@ -63,7 +79,7 @@
             </div>
             <div id="frameworksDiv">
                 <vaadin-grid aria-label="Skill Matrix" items="[[skills.frameworks]]">
-                    <vaadin-grid-column>
+                    <vaadin-grid-column width="40%">
                         <template class="header">Skill</template>
                         <template>[[item.skill]]</template>
                     </vaadin-grid-column>
@@ -84,7 +100,7 @@
             </div>
             <div id="toolsDiv">
                 <vaadin-grid aria-label="Skill Matrix" items="[[skills.tools]]">
-                    <vaadin-grid-column>
+                    <vaadin-grid-column width="40%">
                         <template class="header">Skill</template>
                         <template>[[item.skill]]</template>
                     </vaadin-grid-column>
